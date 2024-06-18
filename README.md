@@ -74,10 +74,15 @@ a simple readDir and readFile http server
 ## Todos
 
 [ ] add bearer auth
+
 [ ] puter-app samples
+
 [ ] add security and blacklist
+
 [ ] add more functionalities to existing plugins
+
 [ ] make more plugins
+
 
 
 
