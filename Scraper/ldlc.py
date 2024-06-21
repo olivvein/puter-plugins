@@ -25,11 +25,18 @@ def scrape_ldlc(query):
         #print(soup.prettify())
         
         #get every li that starts with "pdt-" in the id
-        products = soup.find_all('li', id=lambda x: x and x.startswith('pdt-'))
+        products = soup.find_all('li', id=lambda x: x and x.startswith('pdt-'))   
         firstProduct=products[0]
         #find div with class "price"
         price = firstProduct.find('div', class_='price')
         print(price.text)
+        price2=price.text.replace('€', '.')
+        print("print price2")
+        print(price2)
+        priceValue=float(price2)
+        print(priceValue)
+        TVA=priceValue+priceValue*0.2
+        print(TVA)
         
     else:
         print(f'Failed to retrieve the search results. Status code: {response.status_code}')
